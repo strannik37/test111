@@ -1,0 +1,97 @@
+*****************************************************************
+
+                 PureBasic for Linux
+
+               (c) Fantaisie Software
+
+*****************************************************************
+
+Installation:
+-------------
+
+  First, make sure you have the required libraries installed. (see README)
+  On information where to download these packages and how to install them, 
+  please refere to the documentation of your Linux distribution.
+
+Language information:
+  
+  PureBasic help is provided in 3 langages (English, German and French).
+  If the IDE language is set to one of these languages, it will choose
+  the correct helpfile as well. 
+
+  However, if you have selected a different language in the Preferences, 
+  it will use the english helpfile by default. If you wish to change this, just
+  replace the "english.help" in your purebasic folder by the one you wish to use.
+
+  
+Quick Installation method:
+
+  If you do not need to use the compiler from the commandline, the quickest
+  method is to simply extract the purebasic archive somewhere and execute
+  the PureBasic IDE.
+
+  Type "./purebasic" from inside the "compilers" folder, or doubleclick
+  on the "purebasic" executable file in your file manager.
+
+
+Other Installation methods:
+
+
+  1) Recommended (doesn't require root rights)
+
+     a) Setup the PUREBASIC_HOME environment variable to your purebasic
+        path. It can be done in a terminal like this (if you have put 
+        purebasic in your home directory):
+
+  export PUREBASIC_HOME=~/purebasic
+
+
+     b) Add the purebasic/compilers/ directory to you path, as it's
+        where all purebasic binaries are. This can be done like this:
+
+  export PATH=$PUREBASIC_HOME/compilers:$PATH
+
+
+     After these 2 steps, you should be able to type 'pbcompiler' in a shell
+     and you ready to use the IDE, just type 'purebasic'.
+
+     Note that these steps only affect your current terminal session, and will not
+     be present after you log out or restart. It is recommended that you put the above
+     two lines inside a startup script (like "~/.bashrc" if you use the bash), so
+     they are executed whenever you log in or open a terminal.
+  
+  
+  2) Not recommended, as it will dispatch files at several place of your filessystem. It can be useful for large deployment tough.
+
+  Use 'su -' to have root shell (if not already done)
+
+  Copy the 'purebasic/Compilers/pbcompiler' file in /usr/bin/
+  or any other directory in the PATH:
+
+    # cp purebasic/compilers/pbcompiler /usr/bin/
+
+  Next, move the whole 'purebasic' directory in /usr/share/
+
+    # cp -rf purebasic /usr/share/
+
+  If you don't have 'fasm', copy it in your path (fasm v1.45 at least)
+
+    # cp purebasic/compilers/fasm /usr/bin/
+
+  To test your install, just type:
+
+    # pbcompiler
+
+  It should output:
+
+  ******************************************
+  PureBasic Linux x86 
+  ******************************************
+
+  A filename must be specified.
+
+Misc:
+-----
+
+ To have more informations about PureBasic, see the
+ README file.
